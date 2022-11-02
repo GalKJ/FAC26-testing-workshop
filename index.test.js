@@ -32,17 +32,18 @@ test('test calc UI', () => {
     const inputA = document.querySelector("input[name='a']");
     const inputB = document.querySelector("input[name='b']");
     const sign = document.querySelector("select[name='sign']");
-    const submitButton = document.querySelector("button[name='submit']");
-    
+    const submitButton = document.querySelector("button[type='submit']");
+    const result = document.querySelector('#result');
 
 
-    inputA.value = 1;
-    inputB.value = 1;
-    sign.value = '+';
+
+    inputA.value = parseInt(2);
+    inputB.value = parseInt(4);
+    sign.value = '*';
 
     submitButton.click();
 
-
+    equal(result.textContent, 8);
 
 
 })

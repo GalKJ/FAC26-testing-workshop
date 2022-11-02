@@ -28,14 +28,21 @@
 // equal(actual, expected)
 // })
 
-test("Uppercases the user's input and updates the page", () => {
-    const inputA = document.querySelector("#a"); // step 1
-    const inputB = document.querySelector("#b"); // step 1
-    inputA.value = 2; // step 2
-    inputA.value = 2; // step 2
-    const submitButton = document.querySelector("button[type='submit']");
-    submitButton.click(); // step 3
-    const result = document.querySelector("#result");
-    equal(result.textContent, 4); // step 4
-    result.textContent = ""; // reset the page so it doesn't affect the page/other tests
-  });
+test('test calc UI', () => {
+    const inputA = document.querySelector("input[name='a']");
+    const inputB = document.querySelector("input[name='b']");
+    const sign = document.querySelector("select[name='sign']");
+    const submitButton = document.querySelector("button[name='submit']");
+    
+
+
+    inputA.value = 1;
+    inputB.value = 1;
+    sign.value = '+';
+
+    submitButton.click();
+
+
+
+
+})

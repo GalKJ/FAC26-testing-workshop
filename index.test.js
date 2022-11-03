@@ -37,13 +37,13 @@ test('test calc UI', () => {
 
 
 
-    inputA.value = parseInt(2);
-    inputB.value = parseInt(4);
-    sign.value = '*';
+    inputA.value = 1;
+    inputB.value = 1;
+    sign.value = '+';
 
     submitButton.click();
 
-    equal(result.textContent, 8);
+    equal(result.textContent, '2');
 
 
 })
